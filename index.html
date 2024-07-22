@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc Thông Tin Thẻ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border: 1px dashed white;
+            width: 300px;
+            text-align: center;
+        }
+        .card h2 {
+            text-align: center;
+        }
+        .card .chip-area, .card .scan-icon {
+            margin: 10px 0;
+            padding: 20px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .card .chip-area {
+            background-color: #444;
+            height: 100px;
+        }
+        .card .scan-icon {
+            background-color: #555;
+            height: 50px;
+            font-size: 24px;
+        }
+        .card .account-info {
+            margin: 10px 0;
+            border: 1px dashed white;
+            padding: 5px;
+        }
+        .card .button-group {
+            text-align: center;
+        }
+        .card .button-group button, .card .button-group a {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .card .button-group button:hover, .card .button-group a:hover {
+            background-color: #777;
+        }
+    </style>
+    <script>
+        function navigateToNextPage() {
+            window.location.href = 'quanlythe.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="card">
+        <h2>Đọc Thông Tin Thẻ</h2>
+        <div class="chip-area">
+            [Khu Vực Đặt Thẻ Chip]
+        </div>
+        <div class="scan-icon">
+            📶
+        </div>
+        <div class="account-info">
+            <p>Tài khoản: 1234567890</p>
+            <p>Tên chủ tài khoản: John Doe</p>
+            <p>Ngày mở: 01/01/2020</p>
+        </div>
+        <div class="button-group">
+            <button onclick="navigateToNextPage()">Lưu Thông Tin</button>
+            <button>Hủy</button>
+        </div>
+        <div class="button-group">
+            <a href="quanlythe.html">Quản Lý Thẻ</a>
+        </div>
+    </div>
+</body>
+</html>

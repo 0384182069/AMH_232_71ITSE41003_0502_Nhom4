@@ -1,95 +1,64 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đọc Thông Tin Thẻ</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .card {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            margin: 10px;
-            border: 1px dashed white;
-            width: 300px;
-            text-align: center;
-        }
-        .card h2 {
-            text-align: center;
-        }
-        .card .chip-area, .card .scan-icon {
-            margin: 10px 0;
-            padding: 20px;
-            border: 1px solid white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-        }
-        .card .chip-area {
-            background-color: #444;
-            height: 100px;
-        }
-        .card .scan-icon {
-            background-color: #555;
-            height: 50px;
-            font-size: 24px;
-        }
-        .card .account-info {
-            margin: 10px 0;
-            border: 1px dashed white;
-            padding: 5px;
-        }
-        .card .button-group {
-            text-align: center;
-        }
-        .card .button-group button, .card .button-group a {
-            margin: 5px;
-            padding: 5px 10px;
-            background-color: #555;
-            color: white;
-            border: none;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .card .button-group button:hover, .card .button-group a:hover {
-            background-color: #777;
-        }
-    </style>
-    <script>
-        function navigateToNextPage() {
-            window.location.href = 'quanlythe.html';
-        }
-    </script>
+    <title>CV - Nguyễn Đình Triệu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="card">
-        <h2>Đọc Thông Tin Thẻ</h2>
-        <div class="chip-area">
-            [Khu Vực Đặt Thẻ Chip]
+    <div class="cv-container">
+        <div class="header">
+            <div class="contact-info">
+                <h1>NGUYỄN ĐÌNH TRIỆU</h1>
+                <h2>IT INTERN</h2>
+                <p class="summary">Có sự hiểu biết, định hướng hiệu suất và định hướng chi tiết với các dự án công nghệ thông tin. Một IT Developer giỏi trong việc thiết lập, vận hành cấu hình và bảo trì phần cứng, phần mềm; phát triển các tập lệnh tự động hóa và giải quyết mọi yêu cầu công việc hỗ trợ kỹ thuật.</p>
+                <p class="contact"><i class="fa fa-phone"></i> (+84) 328 961 716</p>
+                <p class="contact"><i class="fa fa-envelope"></i> nguyedinhtrieu1907@gmail.com</p>
+                <p class="contact"><i class="fa fa-map-marker"></i> HCMC, Viet Nam</p>
+            </div>
         </div>
-        <div class="scan-icon">
-            📶
-        </div>
-        <div class="account-info">
-            <p>Tài khoản: 1234567890</p>
-            <p>Tên chủ tài khoản: John Wick</p>
-            <p>Ngày mở: 28/02/2014</p>
-        </div>
-        <div class="button-group">
-            <button onclick="navigateToNextPage()">Lưu Thông Tin</button>
-            <button>Hủy</button>
-        </div>
-        <div class="button-group">
-            <a href="quanlythe.html">Quản Lý Thẻ</a>
+        <div class="main">
+            <div class="left-column">
+                <section class="experience">
+                    <h3>KINH NGHIỆM LÀM VIỆC</h3>
+                    <p><strong>2024, Hồ Chí Minh</strong></p>
+                    <p><strong>Thực tập - Học việc IT | FreeC Asia</strong></p>
+                    <ul>
+                        <li>Nhận yêu cầu, đề xuất thay đổi; hỗ trợ và đưa ra lời khuyên hữu ích cho đồng nghiệp về các vấn đề liên quan đến IT</li>
+                        <li>Hỗ trợ người quản lý CNTT, xác định cấu hình và duy trì các phần cứng và phần mềm; đồng thời thực hiện sao lưu thường xuyên nguồn dữ liệu</li>
+                        <li>Kiểm tra các tập lệnh tự động hóa đã phát triển, những cơ sở dữ liệu được quản lý và cập nhật; đồng thời làm việc chặt chẽ với web đội thiết kế</li>
+                        <li>Theo dõi các hệ thống đã cài đặt trong máy tính; và thực hiện các nhiệm vụ khác theo yêu cầu.</li>
+                    </ul>
+                </section>
+                <section class="education">
+                    <h3>HỌC VẤN</h3>
+                    <p><strong>2022 - 2026 | Đại học Văn Lang</strong></p>
+                    <p>GPA: 3,2</p>
+                    <p>Cử nhân Công nghệ phần mềm</p>
+                    <p>Thành viên của các Câu lạc bộ và Hội nhóm:</p>
+                    <ul>
+                        <li>Hội Kỹ thuật IT</li>
+                        <li>Hội Toán học</li>
+                        <li>Câu lạc bộ Quần vợt</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="right-column">
+                <section class="skills">
+                    <h3>KỸ NĂNG</h3>
+                    <p>Microsoft Office: 85%</p>
+                    <p>Notepad ++, C ++: 85%</p>
+                    <p>TextWrangler, BBEdit: 80%</p>
+                    <p>UltraEdit, Python: 80%</p>
+                </section>
+                <section class="languages">
+                    <h3>NGÔN NGỮ</h3>
+                    <ul>
+                        <li>Tiếng Anh</li>
+                    </ul>
+                </section>
+            </div>
         </div>
     </div>
 </body>

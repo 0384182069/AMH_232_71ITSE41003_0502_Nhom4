@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Thẻ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border: 1px dashed white;
+            width: 300px;
+            text-align: center;
+        }
+        .card h2 {
+            text-align: center;
+        }
+        .card p, .card div {
+            margin: 10px 0;
+            border: 1px dashed white;
+            padding: 5px;
+        }
+        .card .button-group {
+            text-align: center;
+        }
+        .card .button-group button, .card .button-group a {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .card .button-group button:hover, .card .button-group a:hover {
+            background-color: #777;
+        }
+        .card .selected {
+            background-color: #777;
+        }
+    </style>
+    <script>
+        let selectedCard = null;
+
+        function selectCard(cardNumber) {
+            if (selectedCard) {
+                selectedCard.classList.remove('selected');
+            }
+            selectedCard = document.getElementById('card' + cardNumber);
+            selectedCard.classList.add('selected');
+        }
+
+        function deleteCard(cardNumber) {
+            const card = document.getElementById('card' + cardNumber);
+            card.parentNode.removeChild(card);
+            if (selectedCard === card) {
+                selectedCard = null;
+            }
+        }
+
+        function navigateToNextPage() {
+            if (selectedCard) {
+                // Navigate to the next page
+                window.location.href = 'truyenthongtin.html';
+            } else {
+                alert('Vui lòng chọn một thẻ trước.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="card">
+        <h2>Quản Lý Thẻ</h2>
+        <div id="card1">
+            <p onclick="selectCard(1)">Thẻ 1: **** **** 1234</p>
+            <button onclick="deleteCard(1)">Xóa Thẻ</button>
+        </div>
+        <div id="card2">
+            <p onclick="selectCard(2)">Thẻ 2: **** **** 5678</p>
+            <button onclick="deleteCard(2)">Xóa Thẻ</button>
+        </div>
+        <div id="card3">
+            <p onclick="selectCard(3)">Thẻ 3: **** **** 9101</p>
+            <button onclick="deleteCard(3)">Xóa Thẻ</button>
+        </div>
+        <div class="button-group">
+            <button onclick="navigateToNextPage()">Chọn Thẻ</button>
+        </div>
+        <div class="button-group">
+            <a href="index.html">Quay Lại</a>
+            <a href="truyenthongtin.html">Truyền Thông Tin</a>
+        </div>
+    </div>
+</body>
+</html>
